@@ -37,7 +37,10 @@ jobs:
 
       - name: 'Workaround permissions issue'
         run: chown $(whoami):$(whoami) -R .
-
+        
+      - name: Confirm NPM Token
+        run: cat .npmrc
+      
       - name: Install NPM dependencies
         run: npm ci
 
